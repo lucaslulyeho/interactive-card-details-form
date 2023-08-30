@@ -63,7 +63,6 @@ function checkBlankFields(){
 function checkNumbers(){
     let invalidErrors = true;
     if(isNaN(cardNumberInput.value) ){
-        // && cardNumberInput.value != ""
         cardNumberInput.classList.add("has-error");
         invalidNumber.style.display = 'block';
         console.log('it is not a number');
@@ -73,7 +72,6 @@ function checkNumbers(){
 
     }
     if(isNaN(monthInput.value) || isNaN(yearInput.value)){
-        // && cardNumberInput.value != ""
         isNaN(monthInput.value)  ? monthInput.classList.add("has-error"): yearInput.classList.add("has-error");
         isNaN(yearInput.value) ? yearInput.classList.add("has-error"): monthInput.classList.add("has-error");
         invalidDates.style.display = 'block';
@@ -129,15 +127,6 @@ function updateCards(){
 form.onkeyup = function(){
     updateCards();
 }
-// cardNumberInput.onkeydown = function () {
-//     if (cardNumberInput.value.length > 0) {
-
-//         if (cardNumberInput.value.length % 4 == 0) {
-//             cardNumberInput.value += " ";
-//         }
-//     }
-//     let numbersFormated = 
-// }
 
 function updatePage(){
     rightSection.innerHTML = `<div id="thank-you">
@@ -149,8 +138,7 @@ function updatePage(){
     </div>
   </div>`;
 
-//   form.style.display = 'none';
-//   thankYou.style.display = 'flex';
+
 }
 
 
@@ -162,10 +150,7 @@ submit.onclick = function(){
     for(let input of inputsArray){
         input.classList.remove('has-error')
     }
-    // for(let invalidInput of invalidsArray){
-    //     invalidInput.style.display = "none";
-    // }
-    // checkEmptyFields();
+
 checkBlankFields();
 
    
@@ -173,7 +158,6 @@ checkBlankFields();
         checkNumbers();
         if(checkNumbers()){
             updatePage();
-            // thankYou = document.getElementById('thank-you'); 
             let continueBtn = document.getElementById('continue-btn');
 
 
@@ -182,11 +166,7 @@ checkBlankFields();
                 location.reload();
             }
         }
-        // checkString();
-        // if(checkString()){
-        //     calculateAge();
-        //     updatePage();
-        // }
+
     }
     
 }
