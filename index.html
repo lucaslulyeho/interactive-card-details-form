@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="script.js" defer></script>
+  <title>Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <section id="left">
+
+    <div id="card-front">
+      <img src="images/card-logo.svg" alt="">
+      
+
+    <div id="card-details">
+      <p id="card-number">0000 0000 0000 0000</p>
+      <div id="name-date">
+        <p id="holder-name">Jane Appleseed</p>
+        <p id="exp-date">00/00</p>
+      </div>
+    </div>
+    </div>
+    <div id="card-back">
+      <p id="cvc">000</p>
+    </div>
+    
+  
+    
+  </section>
+  <section id="right">
+    
+   <form>
+    <label for="cardholder-name" id="name-label">
+      Cardholder Name
+      <input type="text" name="name" id="name-input" placeholder="e.g. Jane Appleseed">
+      <p class="error" id="name-blank">Can't be blank</p>
+
+    </label>
+    <label for="card-number-input" id="number-label">
+      Card Number
+      <input type="text" name="number" id="card-number-input" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+      <p class="error" id="number-blank">Can't be blank</p>
+
+      <p class="error" id="card-number-error">Wrong format, numbers only</p>
+    </label>
+    <div class="date-cvc">
+      <label for="date" id="date-label">
+        Exp. Date (mm/yy)
+        <div>
+          <input type="text" placeholder="MM" id="month-input" maxlength="2">
+          <input type="text" placeholder="YY" id="year-input" maxlength="2">
+
+        </div>
+        <p class="error" id="dates-blank">Can't be blank</p>
+        <p class="error" id="dates-format-error">Numbers only</p>
+      </label>
+      <label for="cvc" id="cvc-label">
+        CVC
+        <input type="text" placeholder="e.g 123" id="cvc-input" maxlength="3">
+        <p class="error" id="cvc-blank">Can't be blank</p>
+        <p class="error" id="cvc-format-error">Numbers only</p>
+      </label>
+
+    </div>  
+    <div id="submit-btn">
+      Confirm
+    </div>
+  
+   </form>
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+  <!-- <div id="thank-you">
+    <img src="images/icon-complete.svg" alt="">
+    <h2>THANK YOU!</h2>
+    <p>We've added your card details</p>
+    <div id="continue-btn">
+      Continue
+    </div>
+  </div> -->
+  </section>
+
+  
+
+  
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

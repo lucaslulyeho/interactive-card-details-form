@@ -1,0 +1,334 @@
+:root {
+    --linear-gradient-start: hsl(249, 99%, 64%);
+    --linear-gradient-end: hsl(278, 94%, 30%);
+    --red:  hsl(0, 100%, 66%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --primary-light-red: hsl(0, 100%, 67%);
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+html{
+   font-family: 'Space Grotesk', sans-serif;
+   font-size: 18px;
+}
+
+body{
+    display: flex;
+}
+section {
+    flex-basis: 50%;
+}
+
+section#left{
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#card-front, #card-back{
+    
+    background-repeat: no-repeat;
+
+    height: 250px;
+    width: 450px;
+    padding: 30px;
+    color: var(--neutral-white);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    
+    /* background-size: contain; */
+
+}
+#card-front{
+    background-image: url(images/bg-card-front.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: 110px;
+    
+}
+#card-front img{
+    width: 70px;
+    /* height: 100px; */
+}
+#card-details {
+    /* margin-bottom: 55px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#card-number{
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    word-spacing: .6rem;
+    font-weight: 400;
+}
+#name-date{
+    font-size: .7rem;
+    font-weight: 300;
+}
+#name-date {
+    display: flex;
+    justify-content: space-between;
+}
+#card-back{
+    background-image: url(images/bg-card-back.png);
+    position: relative;
+    left: 200px;
+}
+#card-details {
+}
+#cvc{
+    font-size: .8rem;
+    position: relative;
+    top: 82px;
+    left: 335px
+}
+form {
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+}
+input{
+    padding: 13px;
+    margin-top: 10px;
+   
+    border-radius: 6px;
+    border: 1px solid var(--light-grayish-violet);
+    font-size: 1.1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 10px;
+    border-color: linear-gradient(45deg, blue, red);
+
+}
+::placeholder{
+    font-size: 1.1rem;
+    color: var(--light-grayish-violet);
+}
+
+#submit-btn, #continue-btn{
+    background-color: var(--very-dark-violet);
+    color: var(--neutral-white);
+    text-align: center;
+    padding: 15px;
+    text-transform: capitalize;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+.date-cvc{
+    display: flex;
+justify-content: space-between;}
+#date-label input{
+    width: 85px;
+    margin-right: 8px;
+}
+#cvc-input{
+    width: 225px;
+}
+.has-error{
+    border-color: var(--primary-light-red)
+}
+.error{
+    color:var(--primary-light-red);
+    text-transform: none;
+    font-size: .7rem;
+    display: none;
+}
+
+#thank-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    /* display: none; */
+}
+#thank-you img{
+    width: 50px;
+    margin-bottom: 30px;
+}
+#thank-you h2{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+#thank-you p{
+    font-size: .7rem;
+    color: var(--dark-grayish-violet);
+}
+
+#continue-btn{
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    html{
+        font-size: 12px;
+    }
+    body{
+        flex-direction: column;
+    }
+    /* section {
+        flex-basis: 100%;
+    } */
+    *{
+    }
+    section#left{
+        
+        background-size: cover;
+        height: 500px;
+       
+
+        width: 100%;
+        /* flex-basis: 20%; */
+        margin-bottom: 50px;
+        padding-top: 30px;
+
+    }
+    section#right{
+       
+        padding: 15px;
+    }
+
+    #card-front, #card-back{
+    
+    
+        height: 150px;
+        width: 280px;
+        padding: 25px;
+
+        border-radius: 10px;
+        /* padding: 30px; */
+        
+        
+        background-size: cover;
+    
+    }   
+    #card-front{
+        
+       
+        position: absolute;
+        left: 15px;
+        top: 117px;
+        z-index: 1;
+        
+    }
+    #card-front img{
+        width: 45px;
+        /* height: 100px; */
+    }
+    #card-details {
+        /* margin-bottom: 0; */
+        /* width: 100%;
+        display: flex;
+        flex-direction: column; */
+    }
+    #card-number{
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        letter-spacing: .25rem;
+    }
+    #name-date{
+        font-size: .8rem;
+    }
+    
+    #card-back{
+        left: 80px;
+        margin-bottom: 50px;
+    }
+    #card-details {
+    }
+    #cvc{
+        font-size: .7rem;
+        top: 43px;
+        left: 200px;
+        letter-spacing: .1rem;
+        width: 20px;
+    }
+    form {
+        
+        width: 320px;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    input{
+      
+        font-size: 1.3rem;
+ 
+    }
+    ::placeholder{
+        font-size: 1.3rem;
+    }
+    
+    #submit-btn, #continue-btn{
+       
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
+    
+    #date-label input{
+        width: 75px;
+    }
+    #cvc-input{
+        width: 140px;
+    }
+    
+    .error{
+    
+        font-size: .9rem;
+    }
+    
+    #thank-you{
+       
+        width: 320px;
+        /* display: none; */
+    }
+    #thank-you img{
+        width: 50px;
+        margin-bottom: 30px;
+    }
+    #thank-you h2{
+        font-weight: 500;
+        font-size: 1.7rem;
+        letter-spacing: .5rem;
+    }
+    #thank-you p{
+        font-size: 1.2rem;
+    }
+    
+    #continue-btn{
+        
+    }
+     
+}
